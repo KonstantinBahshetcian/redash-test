@@ -10,7 +10,7 @@ import './renderer.less';
 
 import countriesDataUrl from '../maps/countries.geo.json';
 import subdivJapanDataUrl from '../maps/japan.prefectures.geo.json';
-import subdivUSADataUrl from '../maps/jgz_2010_us_050_00_5m.json';
+import subdivUSADataUrl from '../maps/gz_2010_us_050_00_5m.json';
 
 function getDataUrl(type) {
   switch (type) {
