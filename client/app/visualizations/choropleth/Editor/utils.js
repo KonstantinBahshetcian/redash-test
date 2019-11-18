@@ -14,9 +14,14 @@ export function inferCountryCodeType(mapType, data, countryCodeField) {
       name_local: /^[\u3400-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF]+$/i,
       iso_3166_2: /^JP-[0-9]{2}$/i,
     },
-    subdiv_usa: {
-      COUNTY: /^[0-9]{3}$/i,
-      NAME: /^[a-z]+$/i,
+    subdiv_usa_counties: {
+      name: /^[a-z]+$/i,
+    },
+    subdiv_usa_states: {
+      name: /^[a-z]+$/i,
+    },
+    subdiv_usa_florida: {
+      name: /^[a-z]+$/i,
     },
   };
 

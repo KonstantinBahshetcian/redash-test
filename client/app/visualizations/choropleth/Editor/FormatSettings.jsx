@@ -37,10 +37,19 @@ function TemplateFormatHint({ mapType }) { // eslint-disable-line react/prop-typ
               <div><code>{'{{ @@iso_3166_2 }}'}</code> five-letter ISO subdivision code (JP-xx);</div>
             </React.Fragment>
           )}
-          {mapType === 'subdiv_usa' && (
+          {mapType === 'subdiv_usa_counties' && (
             <React.Fragment>
-              <div><code>{'{{ @@NAME }}'}</code> County name;</div>
-              <div><code>{'{{ @@COUNTY }}'}</code> three-digit County code;</div>
+              <div><code>{'{{ @@name }}'}</code> County name;</div>
+            </React.Fragment>
+          )}
+          {mapType === 'subdiv_usa_states' && (
+            <React.Fragment>
+              <div><code>{'{{ @@name }}'}</code> State name;</div>
+            </React.Fragment>
+          )}
+          {mapType === 'subdiv_usa_florida' && (
+            <React.Fragment>
+              <div><code>{'{{ @@name }}'}</code> Florida counties name;</div>
             </React.Fragment>
           )}
         </React.Fragment>

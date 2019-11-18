@@ -22,10 +22,17 @@ export default function GeneralSettings({ options, data, onOptionsChange }) {
           name_local: 'Name (local)',
           iso_3166_2: 'ISO-3166-2',
         };
-      case 'subdiv_usa':
+      case 'subdiv_usa_counties':
         return {
-          NAME: 'Full name',
-          COUNTY: 'County',
+          name: 'County name',
+        };
+      case 'subdiv_usa_states':
+        return {
+          name: 'State name',
+        };
+      case 'subdiv_usa_florida':
+        return {
+          name: 'County name',
         };
       default:
         return {};
@@ -53,7 +60,9 @@ export default function GeneralSettings({ options, data, onOptionsChange }) {
         >
           <Select.Option key="countries">Countries</Select.Option>
           <Select.Option key="subdiv_japan">Japan/Prefectures</Select.Option>
-          <Select.Option key="subdiv_usa">USA/Counties</Select.Option>
+          <Select.Option key="subdiv_usa_counties">USA/Counties</Select.Option>
+          <Select.Option key="subdiv_usa_states">USA/States</Select.Option>
+          <Select.Option key="subdiv_usa_florida">USA/Florida</Select.Option>
         </Select>
       </div>
 

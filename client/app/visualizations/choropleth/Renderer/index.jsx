@@ -10,13 +10,17 @@ import './renderer.less';
 
 import countriesDataUrl from '../maps/countries.geo.json';
 import subdivJapanDataUrl from '../maps/japan.prefectures.geo.json';
-import subdivUSADataUrl from '../maps/gz_2010_us_050_00_5m.json';
+import subdivUSACountiesDataUrl from '../maps/usa.geo.json';
+import subdivUSAStatesDataUrl from '../maps/usa.states.geo.json';
+import subdivUSAFloridaDataUrl from '../maps/florida.geo.json';
 
 function getDataUrl(type) {
   switch (type) {
     case 'countries': return countriesDataUrl;
     case 'subdiv_japan': return subdivJapanDataUrl;
-    case 'subdiv_usa': return subdivUSADataUrl;
+    case 'subdiv_usa_counties': return subdivUSACountiesDataUrl;
+    case 'subdiv_usa_states': return subdivUSAStatesDataUrl;
+    case 'subdiv_usa_florida': return subdivUSAFloridaDataUrl;
     default: return null;
   }
 }
